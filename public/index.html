@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desarrollo de software, analítica de datos y soluciones web para empresas locales.">
+  <title>Mateo González | Software y Analítica de Datos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script
+    src="https://kit.fontawesome.com/3551fd40ed.js"
+    crossorigin="anonymous">
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">MG</span>
+        <span><strong>Mateo González</strong><small>Software · Datos · Web</small></span>
+      </a>
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="#problemas">Qué resolvemos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#proyectos">Ejemplos</a>
+        <a class="nav-cta" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <div style="margin: 2%" class="container hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Convierte la información de tu negocio en <span>decisiones más claras.</span></h1>
+          <p class="lead">Desarrollo soluciones de software, analítica de datos y sitios web para ayudarte a entender mejor tus ventas, clientes, inventario y operación.</p>
+          <div class="actions">
+            <a class="button primary" href="https://wa.me/526143497994?text=Hola%20Mateo,%20me%20interesa%20conocer%20más%20sobre%20tus%20servicios." target="_blank" rel="noopener">Solicitar una reunión <b>→</b></a>
+            <a class="button secondary" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="tags"><span>Ventas</span><span>Clientes</span><span>Inventario</span><span>Automatización</span></div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <div class="hero-card-head">
+            <div><p class="mini-label">Diagnóstico inicial</p><h2>Información útil, no solo gráficas.</h2></div>
+            <span class="badge">Disponible</span>
+          </div>
+          <div class="metric-grid">  
+            <article>
+                <i class="fa-solid fa-chart-line icon"></i>
+                <small>Ventas</small>
+                <strong>Patrones y tendencias</strong>
+            </article>
+
+            <article>
+                <i class="fa-solid fa-users icon"></i>
+                <small>Clientes</small>
+                <strong>Recurrentes e inactivos</strong>
+            </article>
+
+            <article>
+                <i class="fa-solid fa-dolly  icon"></i>
+                <small>Inventario</small>
+                <strong>Rotación y visibilidad</strong>
+            </article>
+
+            <article>
+                <i class="fa-solid fa-gears icon"></i>
+                <small>Procesos</small>
+                <strong>Automatización práctica</strong>
+            </article>
+
+
+          </div>
+          <div class="hero-note"><span>01</span><p>Primero revisamos la información disponible y definimos un alcance realista antes de desarrollar cualquier solución.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="questions" id="problemas">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Preguntas que tu negocio debería poder responder</p>
+          <h2>¿Qué información te falta ver con claridad?</h2>
+        </div>
+        <div class="question-carousel">
+      <div class="question-carousel-toolbar">
+        <p>
+          Desliza las tarjetas y escribe en las áreas que te interese revisar. 
+        </p>
+
+        <div class="carousel-controls">
+          <button
+            class="carousel-button"
+            id="questionPrev"
+            type="button"
+            aria-label="Ver preguntas anteriores"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+
+          <button
+            class="carousel-button"
+            id="questionNext"
+            type="button"
+            aria-label="Ver preguntas siguientes"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="question-track" id="questionTrack">
+        <article class="question-card reveal">
+          <div class="question-card-top">
+            <span class="question-icon">
+              <i class="fa-solid fa-chart-column"></i>
+            </span>
+            <span class="question-number">01</span>
+          </div>
+
+          <p>
+            ¿Qué productos se venden más y cuáles tienen baja rotación?
+          </p>
+
+          <label class="question-note-label">
+            <span>Describe brevemente tu situación</span>
+
+            <textarea
+              class="question-note"
+              data-topic="Productos y rotación"
+              rows="3"
+              placeholder="Ej. Tengo productos que llevan meses sin moverse."
+            ></textarea>
+          </label>
+        </article>
+
+        <article class="question-card reveal">
+          <div class="question-card-top">
+            <span class="question-icon">
+              <i class="fa-solid fa-users"></i>
+            </span>
+            <span class="question-number">02</span>
+          </div>
+
+          <p>
+            ¿Qué clientes compran con frecuencia y cuáles dejaron de hacerlo?
+          </p>
+
+          <label class="question-note-label">
+            <span>Describe brevemente tu situación</span>
+
+            <textarea
+              class="question-note"
+              data-topic="Clientes recurrentes e inactivos"
+              rows="3"
+              placeholder="Ej. No sabemos qué clientes dejaron de comprar."
+            ></textarea>
+          </label>
+        </article>
+
+        <article class="question-card reveal">
+          <div class="question-card-top">
+            <span class="question-icon">
+              <i class="fa-solid fa-boxes-stacked"></i>
+            </span>
+            <span class="question-number">03</span>
+          </div>
+
+          <p>
+            ¿Dónde puede haber exceso de inventario o dinero inmovilizado?
+          </p>
+
+          <label class="question-note-label">
+            <span>Describe brevemente tu situación</span>
+
+            <textarea
+              class="question-note"
+              data-topic="Inventario detenido"
+              rows="3"
+              placeholder="Ej. Tenemos mucho material, pero no sabemos qué rota menos."
+            ></textarea>
+          </label>
+        </article>
+
+        <article class="question-card reveal">
+          <div class="question-card-top">
+            <span class="question-icon">
+              <i class="fa-solid fa-file-signature"></i>
+            </span>
+            <span class="question-number">04</span>
+          </div>
+
+          <p>
+            ¿Qué cotizaciones o servicios necesitan seguimiento?
+          </p>
+
+          <label class="question-note-label">
+            <span>Describe brevemente tu situación</span>
+
+            <textarea
+              class="question-note"
+              data-topic="Cotizaciones y seguimiento"
+              rows="3"
+              placeholder="Ej. Se envían cotizaciones, pero no siempre se les da seguimiento."
+            ></textarea>
+          </label>
+        </article>
+
+        <article class="question-card reveal">
+          <div class="question-card-top">
+            <span class="question-icon">
+              <i class="fa-solid fa-gears"></i>
+            </span>
+            <span class="question-number">05</span>
+          </div>
+
+          <p>
+            ¿Qué tareas repetitivas podrían automatizarse?
+          </p>
+
+          <label class="question-note-label">
+            <span>Describe brevemente tu situación</span>
+
+            <textarea
+              class="question-note"
+              data-topic="Automatización de procesos"
+              rows="3"
+              placeholder="Ej. Capturamos la misma información en varios archivos."
+            ></textarea>
+          </label>
+        </article>
+
+        <article class="question-card reveal">
+          <div class="question-card-top">
+            <span class="question-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </span>
+            <span class="question-number">06</span>
+          </div>
+
+          <p>
+            ¿Tu sitio web comunica correctamente lo que ofrece tu empresa?
+          </p>
+
+          <label class="question-note-label">
+            <span>Describe brevemente tu situación</span>
+
+            <textarea
+              class="question-note"
+              data-topic="Sitio web"
+              rows="3"
+              placeholder="Ej. Nuestro sitio está desactualizado y es difícil contactarnos."
+            ></textarea>
+          </label>
+        </article>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-heading split reveal">
+          <div><p class="eyebrow">Servicios</p><h2>Tres áreas conectadas por un mismo objetivo.</h2></div>
+          <p>Mejorar la forma en que tu empresa organiza información, atiende clientes y comunica sus servicios.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card dark reveal">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-chart-line"></i>
+            </span>
+
+
+            <h3>Analítica de datos</h3>
+
+            <p>
+              Convierte información dispersa en reportes claros para detectar
+              patrones, áreas de mejora y oportunidades de seguimiento.
+            </p>
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Ventas, productos e inventario</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Clientes recurrentes e inactivos</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Reportes y dashboards</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-code"></i>
+            </span>
+
+
+            <h3>Desarrollo de software</h3>
+
+            <p>
+              Herramientas adaptadas a la operación real de tu empresa,
+              sin agregar complejidad innecesaria.
+            </p>
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Sistemas internos</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Automatización de procesos</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Integración de información</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-window-maximize"></i>
+            </span>
+
+            <h3>Desarrollo y mejora web</h3>
+
+            <p>
+              Sitios claros, rápidos y adaptados a celular que comuniquen
+              mejor tus servicios y faciliten el contacto.
+            </p>
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Diseño y rediseño web</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>WhatsApp, formularios y contacto</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span>Servicios, promociones y vacantes</span>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="proceso">
+      <div class="container process-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Forma de trabajo</p>
+          <h2>Primero entendemos el problema. Después construimos.</h2>
+          <p>No parto de una solución prefabricada.
+            <br>El alcance se define según la operación, la información disponible y el objetivo del negocio.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span>01</span><div><h3>Conversación inicial</h3><p>Revisamos necesidades, procesos y problemas que hoy no están claros.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>Diagnóstico y alcance</h3><p>Definimos qué información existe, qué se puede mejorar y qué entregables tienen sentido.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>Propuesta</h3><p>Presento alcance, tiempo, costo y límites antes de iniciar.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3>Implementación y seguimiento</h3><p>Entrego la solución, explico resultados y planteamos los siguientes pasos.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section projects" id="proyectos">
+      <div class="container">
+
+        <div class="section-heading split reveal">
+          <div>
+            <p class="eyebrow">Ejemplos demostrativos</p>
+
+            <h2>Así puede verse una solución aplicada.</h2>
+          </div>
+
+          <p>
+            Prototipos desarrollados para mostrar aplicaciones posibles
+            en analítica de datos, diseño web y software.
+          </p>
+        </div>
+
+        <div class="project-grid project-grid--showcase">
+
+          <!-- ======================================
+              PROYECTO 1: DASHBOARD COMERCIAL
+          ======================================= -->
+
+          <article class="project-card reveal">
+
+            <div class="project-media project-media--dashboard">
+              <img
+                src="./assets/images/dashboard_comercial_demo.png"
+                alt="Dashboard comercial con información de ventas, clientes, productos e inventario"
+              >
+            </div>
+
+            <div class="project-copy">
+              <small>Analítica · Prototipo conceptual</small>
+
+              <h3>Dashboard comercial</h3>
+
+              <p>
+                Ventas, clientes, productos e inventario
+                en una vista clara.
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- ======================================
+              PROYECTO 2: ANTES Y DESPUÉS
+          ======================================= -->
+
+          <article class="project-card reveal">
+
+            <div
+              class="before-after"
+              id="webComparison"
+            >
+
+              <!-- Imagen anterior -->
+              <img
+                class="before-after__image"
+                src="./assets/images/web-after.png"
+                alt="Ejemplo de un sitio web antes del rediseño"
+              >
+
+              <!-- Imagen posterior -->
+              <div class="before-after__after">
+                <img
+                  class="before-after__image"
+                  src="./assets/images/web-before.png"
+                  alt="Ejemplo de un sitio web después del rediseño"
+                >
+              </div>
+
+              <!-- Etiquetas -->
+              <span class="before-after__label before-after__label--before">
+                Antes
+              </span>
+
+              <span class="before-after__label before-after__label--after">
+                Después
+              </span>
+
+              <!-- Línea divisoria -->
+              <div class="before-after__divider">
+                <span class="before-after__handle">
+                  <i class="fa-solid fa-left-right"></i>
+                </span>
+              </div>
+
+              <!-- Control invisible que permite arrastrar -->
+              <input
+                class="before-after__range"
+                id="webComparisonRange"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Comparar el sitio antes y después del rediseño"
+              >
+
+            </div>
+
+            <div class="project-copy">
+              <small>Diseño web · Ejercicio conceptual</small>
+
+              <h3>Rediseño web para servicios</h3>
+
+              <p>
+                Comparación entre una presencia digital genérica
+                y una propuesta con mejor jerarquía, navegación
+                y contacto directo.
+              </p>
+            </div>
+
+          </article>
+
+
+          <!-- ======================================
+              PROYECTO 3: SOFTWARE
+          ======================================= -->
+
+          <article class="project-card project-card--wide reveal">
+
+            <div class="project-media project-media--software">
+              <img
+                src="./assets/images/sistema-gestion-comercial.png"
+                alt="Sistema de gestión comercial con clientes, cotizaciones, tareas y automatizaciones"
+              >
+            </div>
+
+            <div class="project-copy">
+              <small>Software · Prototipo funcional</small>
+
+              <h3>Sistema de gestión comercial</h3>
+
+              <p>
+                Clientes, cotizaciones, tareas y seguimientos organizados
+                en una sola herramienta, con recordatorios y automatizaciones.
+              </p>
+            </div>
+
+          </article>
+
+
+          
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section about">
+      <div class="container about-grid">
+        <div class="about-title reveal"><p class="eyebrow">Sobre mí</p><h2>Desarrollo con enfoque práctico y comunicación directa.</h2></div>
+        <div class="about-body reveal">
+          <p>Soy Mateo González, desarrollador de software responsable, planificador y honesto, ademas cuento con experiencia en sistemas web, bases de datos y generación de reportes. Actualmente curso una maestría en Inteligencia Artificial y Analítica de Datos.</p>
+          <p>Trabajo con empresas locales para convertir necesidades operativas e información dispersa en soluciones prácticas, reportes claros y herramientas digitales.</p>
+          <div class="tags"><span>Chihuahua, Chih.</span><span>Atención directa</span><span>Soluciones a medida</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2>Revisemos juntos qué información o proceso puede aprovechar mejor tu empresa.</h2>
+          <p>La primera conversación sirve para entender el problema y definir si existe una oportunidad real de mejora.</p>
+          <div class="contact-links">
+            <a href="mailto:mateo_gl00@hotmail.com">✉ mateo_gl00@hotmail.com</a>
+            <a href="https://wa.me/526143497994" target="_blank" rel="noopener">◉ 614 349 7994</a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <label>Nombre<input name="name" required></label>
+          <label>Empresa<input name="company"></label>
+          <label>Área de interés
+            <select name="interest" required>
+              <option value="">Selecciona una opción</option>
+              <option>Analítica de datos</option>
+              <option>Desarrollo de software</option>
+              <option>Diseño o rediseño web</option>
+              <option>No estoy seguro todavía</option>
+            </select>
+          </label>
+          <label>
+            Mensaje
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="7"
+              placeholder="Puedes agregar aquí cualquier detalle adicional."
+              required
+            ></textarea>
+          </label>
+          <button class="button primary" type="submit">Enviar por WhatsApp →</button>
+          <small class="form-note">El formulario abre WhatsApp; no almacena información.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><p>© <span id="year"></span> Mateo González.</p><p>Desarrollo de Software | Analítica de Datos</p></div></footer>
+<script src="./script.js"></script>
+</body>
+</html>

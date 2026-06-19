@@ -1,0 +1,15 @@
+{
+  "name": "mateo-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de desarrollo de software y analítica de datos",
+  "scripts": {
+    "dev": "sass --watch --style=expanded src/styles/main.scss public/styles.css",
+    "serve": "serve public -l 8000",
+    "build": "sass --style=compressed --no-source-map src/styles/main.scss public/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.99.0",
+    "serve": "^14.2.6"
+  }
+}
