@@ -293,3 +293,254 @@ h2{margin:0 0 20px;font-size:clamp(2.25rem,4vw,4rem);line-height:1.04}h3{margin:
     height: 42px;
   }
 }
+
+/* ==================================================
+   PROYECTOS DEMOSTRATIVOS
+================================================== */
+
+.project-grid--showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-grid--showcase .project-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   MEDIOS DE LOS PROYECTOS
+================================================== */
+
+.project-media,
+.before-after {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.project-media {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--g100);
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ==================================================
+   DASHBOARD
+================================================== */
+
+.project-media--dashboard {
+  padding: 14px;
+}
+
+.project-media--dashboard img {
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* ==================================================
+   COMPARADOR ANTES / DESPUÉS
+================================================== */
+
+.before-after {
+  --position: 50%;
+
+  position: relative;
+  overflow: hidden;
+
+  background: var(--g100);
+
+  cursor: ew-resize;
+  user-select: none;
+}
+
+.before-after__image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+
+  pointer-events: none;
+}
+
+/*
+ * La imagen nueva queda al fondo.
+ * La imagen anterior queda encima y se recorta.
+ */
+.before-after__before {
+  position: absolute;
+  inset: 0;
+
+  clip-path: inset(
+    0
+    calc(100% - var(--position))
+    0
+    0
+  );
+}
+
+.before-after__label {
+  position: absolute;
+  z-index: 4;
+  top: 16px;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: rgba(11, 53, 40, 0.88);
+  color: var(--white);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.before-after__label--before {
+  left: 16px;
+}
+
+.before-after__label--after {
+  right: 16px;
+}
+
+.before-after__divider {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: var(--position);
+
+  width: 3px;
+
+  background: var(--white);
+
+  box-shadow:
+    0 0 0 1px rgba(11, 53, 40, 0.15);
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.before-after__handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: grid;
+
+  width: 46px;
+  height: 46px;
+
+  place-items: center;
+
+  border: 3px solid var(--white);
+  border-radius: 50%;
+
+  background: var(--g900);
+  color: var(--white);
+
+  box-shadow:
+    0 8px 24px rgba(11, 53, 40, 0.28);
+
+  transform: translate(-50%, -50%);
+}
+
+.before-after__range {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+
+  opacity: 0;
+
+  cursor: ew-resize;
+}
+
+
+/* ==================================================
+   PROYECTO DE SOFTWARE
+================================================== */
+
+.project-card--wide {
+  grid-column: 1 / -1;
+}
+
+.project-media--software {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background: var(--g100);
+}
+
+.project-media--software img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* ==================================================
+   RESPONSIVE DE PROYECTOS
+================================================== */
+
+@media (max-width: 900px) {
+  .project-grid--showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .before-after__label {
+    top: 10px;
+    padding: 5px 8px;
+    font-size: 0.6rem;
+  }
+
+  .before-after__label--before {
+    left: 10px;
+  }
+
+  .before-after__label--after {
+    right: 10px;
+  }
+
+  .before-after__handle {
+    width: 40px;
+    height: 40px;
+  }
+}

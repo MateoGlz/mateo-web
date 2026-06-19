@@ -441,27 +441,16 @@
 
           <article class="project-card reveal">
 
-            <div
-              class="before-after"
-              id="webComparison"
-            >
-
-              <!-- Imagen anterior -->
-              <img
-                class="before-after__image"
-                src="./assets/images/web-after.png"
-                alt="Ejemplo de un sitio web antes del rediseño"
-              >
-
-              <!-- Imagen posterior -->
-              <div class="before-after__after">
-                <img
-                  class="before-after__image"
-                  src="./assets/images/web-before.png"
-                  alt="Ejemplo de un sitio web después del rediseño"
-                >
-              </div>
-
+           <div class="before-after" id="webComparison" >
+             <!-- DESPUÉS queda como imagen de fondo completa. Será visible principalmente a la derecha. --> 
+              <img class="before-after__image" src="./assets/images/web-after.png" 
+              alt="Ejemplo de un sitio web después del rediseño" > 
+              <!-- ANTES queda encima y se recorta. Será visible principalmente a la izquierda. --> 
+               <div class="before-after__before"> 
+                <img class="before-after__image" 
+                src="./assets/images/web-before.png" 
+            alt="Ejemplo de un sitio web antes del rediseño" > 
+          </div>
               <!-- Etiquetas -->
               <span class="before-after__label before-after__label--before">
                 Antes
