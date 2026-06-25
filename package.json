@@ -12,5 +12,8 @@
     "sass": "^1.99.0",
     "serve": "^14.2.6",
     "wrangler": "^4.86.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }
